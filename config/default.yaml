@@ -1,0 +1,17 @@
+derivationPath:
+  bip44:
+    purpose: 44
+    coin: 0
+    account: 0
+    change: 0
+
+derivedAddressCount: 20
+
+mnemonic:
+  language: english
+  wordCount: 24
+
+web3:
+  provider:
+    url: http://localhost:8545
+
