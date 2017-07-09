@@ -2,7 +2,7 @@
 
 ## What do?
 
-Wallace generates a BIP39 phrase and BIP32 seed.  It then generates the corresponding key pair and a number of derived Ethereum addresses.  If any of the addresses has a balance or a transaction count, it freaks right the fuck out, beeps, and exits.
+Wallace generates a BIP39 phrase and BIP32 seed.  It then generates the corresponding key pair and a number of derived Ethereum addresses.  If any of the addresses has a balance or a transaction count, it freaks right the fuck out, beeps, and exits.  Otherwise, it keeps generating keys and checking addresses until you kill it.
 
 ## Ethereum Node
 
