@@ -1,9 +1,8 @@
 derivationPath:
   bip44:
     purpose: 44
-    coin: 0
+    coin: 60
     account: 0
-    change: 0
 
 derivedAddressCount: 20
 

@@ -15,12 +15,10 @@ const MNEMONIC_WORD_COUNT = config.get<number>('mnemonic.wordCount');
 const DERIVATION_PATH_BIP44_PURPOSE = config.get<string>('derivationPath.bip44.purpose');
 const DERIVATION_PATH_BIP44_COIN = config.get<string>('derivationPath.bip44.coin');
 const DERIVATION_PATH_BIP44_ACCOUNT = config.get<string>('derivationPath.bip44.account');
-const DERIVATION_PATH_BIP44_CHANGE = config.get<string>('derivationPath.bip44.change');
 
 const DERIVED_ADDRESS_COUNT = config.get<number>('derivedAddressCount');
 
-const derivationPath = `m/${DERIVATION_PATH_BIP44_PURPOSE}'/${DERIVATION_PATH_BIP44_COIN}'/${DERIVATION_PATH_BIP44_ACCOUNT}'/${DERIVATION_PATH_BIP44_CHANGE}`;
-// console.log({derivationPath});
+const derivationPath = `m/${DERIVATION_PATH_BIP44_PURPOSE}'/${DERIVATION_PATH_BIP44_COIN}'/${DERIVATION_PATH_BIP44_ACCOUNT}'`;
 
 const network = bitcoin.networks.bitcoin;
 // console.log({network});
