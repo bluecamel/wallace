@@ -24,7 +24,7 @@ const network = bitcoin.networks.bitcoin;
 
 const mnemonic = new Mnemonic(MNEMONIC_LANGUAGE);
 
-while(true) {
+function scan() {
     const phrase = mnemonic.generate(MNEMONIC_WORD_COUNT / 3 * 32);
     const seed = mnemonic.toSeed(phrase);
 
@@ -52,4 +52,8 @@ while(true) {
     }
 
     console.log('');
+
+    setTimeout(scan, 1000);
 }
+
+scan();
