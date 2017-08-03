@@ -10,7 +10,7 @@
     "start": "node build/app.js"
   },
   "author": "Branton Davis <bluecamel@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bip39": "^2.3.1",
     "bitcoinjs-lib": "^3.1.0",
