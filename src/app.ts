@@ -21,26 +21,18 @@ const DERIVED_ADDRESS_COUNT = config.get<number>('derivedAddressCount');
 const derivationPath = `m/${DERIVATION_PATH_BIP44_PURPOSE}'/${DERIVATION_PATH_BIP44_COIN}'/${DERIVATION_PATH_BIP44_ACCOUNT}'`;
 
 const network = bitcoin.networks.bitcoin;
-// console.log({network});
 
 const mnemonic = new Mnemonic(MNEMONIC_LANGUAGE);
 
 while(true) {
     const phrase = mnemonic.generate(MNEMONIC_WORD_COUNT / 3 * 32);
     const seed = mnemonic.toSeed(phrase);
-    // console.log({ phrase, seed });
+
     console.log(`phrase: ${phrase}`);
 
     const bip32RootKey = bitcoin.HDNode.fromSeedHex(seed, network);
-    // console.log({bip32RootKey});
 
     const bip32ExtendedKey = calcBip32ExtendedKey(derivationPath, bip32RootKey);
-    // const bip32ExtendedKeyPublic = bip32ExtendedKey.neutered();
-    // console.log({bip32ExtendedKey});
-
-    // const privateKey = bip32ExtendedKey.toBase58();
-    // const publicKey = bip32ExtendedKeyPublic.toBase58();
-    // console.log({ privateKey, publicKey });
 
     const addresses = getEthereumAddresses(bip32ExtendedKey, network, 20);
 
