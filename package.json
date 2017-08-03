@@ -7,7 +7,8 @@
     "prebuild": "npm install",
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "node build/app.js"
+    "start": "node build/app.js",
+    "go": "npm run build && node build/app.js"
   },
   "author": "Branton Davis <bluecamel@gmail.com>",
   "license": "MIT",
